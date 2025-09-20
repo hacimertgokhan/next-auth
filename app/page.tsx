@@ -20,7 +20,7 @@ export default function Home() {
           {/* Butonlar */}
           <div className="flex items-center justify-center gap-4">
             <button
-                onClick={() => signIn("auth0")}
+                onClick={() => signIn("auth0", { callbackUrl: "/dashboard" })}
                 className="bg-blue-600 text-white px-6 py-2 rounded-xl"
             >
               Giriş yap

@@ -23,7 +23,7 @@ export default function Navbar() {
                 </div>
             ) : (
                 <button
-                    onClick={() => signIn("auth0")}
+                    onClick={() => signIn("auth0", { callbackUrl: "/dashboard" })}
                     className="bg-blue-500/40 px-2 text-xs py-1 rounded"
                 >
                     Giriş Yap

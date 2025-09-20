@@ -9,6 +9,11 @@ const handler = NextAuth({
             issuer: process.env.AUTH0_ISSUER,
         }),
     ],
+    callbacks: {
+        async redirect({ url, baseUrl }) {
+            return "/dashboard";
+        },
+    },
     session: { strategy: "jwt" },
     secret: process.env.NEXTAUTH_SECRET,
 });
